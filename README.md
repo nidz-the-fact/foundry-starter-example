@@ -45,6 +45,12 @@ curl -L https://foundry.paradigm.xyz | bash
 forge init {NAME_FOLDER}
 ```
 *cc. learning: https://book.getfoundry.sh/getting-started/first-steps*
+### 1.3 install inport - openzeppelin
+
+```shell
+forge install Openzeppelin/openzeppelin-contracts --no-commit
+```
+*cc. learning: https://book.getfoundry.sh/projects/dependencies*
 
 ## 2. Usage
 
@@ -53,19 +59,25 @@ forge init {NAME_FOLDER}
 ```shell
 git clone https://github.com/nidz-the-fact/foundry-starter-example
 ```
-### 2.2 SmartContract 
+### 2.2 Import
+
+```shell
+forge install Openzeppelin/openzeppelin-contracts --no-commit
+```
+*cc. learning: https://book.getfoundry.sh/projects/dependencies*
+### 2.3 SmartContract 
 
 ```shell
 your in src/.. (TestToken.sol)
 ```
-### 2.3 Deploy
+### 2.4 Deploy
 
 ```shell
 forge create --rpc-url {YOU_RPC_CHAIN} --private-key {YOU_PRIVATE_KEY} src/{YOU_PATH_CONTRACT}:{YOU_NAME_IN_CONTRACT}
 ```
 if there are Arguments add `--constructor-args` {YOUR_ARGS_1_2}
 *cc. learning: https://book.getfoundry.sh/reference/forge/forge-create*
-### 2.4 Verify
+### 2.5 Verify
 
 ```shell
 forge verify-contract --verifier blockscout --verifier-url --rpc-url {EXP_URL}/api? --private-key {YOU_CONTRACT} {YOU_NAME_IN_CONTRACT} --chain-id {CHAIN_ID}
@@ -73,7 +85,7 @@ forge verify-contract --verifier blockscout --verifier-url --rpc-url {EXP_URL}/a
 if there are Arguments add `--constructor-args` $(cast abi-encode "constructor(string,string)" "TestToken" "TT")
 *note: Verification requires importing the file into `src/..` or redeploying it through **foundry**.*
 *cc. learning: https://book.getfoundry.sh/reference/forge/forge-verify-contract*
-### 2.5 Advance deploy+verify
+### 2.6 Advance deploy+verify
 
 ```shell
 forge create --rpc-url {YOU_RPC_CHAIN} --private-key {YOU_PRIVATE_KEY} src/{YOU_PATH_CONTRACT}:{YOU_NAME_IN_CONTRACT} --verify --verifier blockscout --verifier-url {EXP_URL}/api? --chain-id {CHAIN_ID}
