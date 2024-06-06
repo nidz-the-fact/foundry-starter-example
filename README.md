@@ -45,7 +45,7 @@ curl -L https://foundry.paradigm.xyz | bash
 forge init {NAME_FOLDER}
 ```
 *cc. learning: https://book.getfoundry.sh/getting-started/first-steps*
-### 1.3 install inport - openzeppelin
+### 1.3 install import - openzeppelin
 
 ```shell
 forge install Openzeppelin/openzeppelin-contracts --no-commit
