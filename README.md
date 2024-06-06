@@ -80,7 +80,7 @@ if there are Arguments add `--constructor-args` {YOUR_ARGS_1_2}
 ### 2.5 Verify
 
 ```shell
-forge verify-contract --verifier blockscout --verifier-url --rpc-url {EXP_URL}/api? --private-key {YOU_CONTRACT} {YOU_NAME_IN_CONTRACT} --chain-id {CHAIN_ID}
+forge verify-contract --verifier blockscout --verifier-url {EXP_URL}/api? {YOU_CONTRACT} {YOU_NAME_IN_CONTRACT} --chain-id {CHAIN_ID}
 ```
 if there are Arguments add `--constructor-args` $(cast abi-encode "constructor(string,string)" "TestToken" "TT")
 *note: Verification requires importing the file into `src/..` or redeploying it through **foundry**.*
