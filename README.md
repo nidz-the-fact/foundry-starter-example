@@ -59,10 +59,18 @@ forge install Openzeppelin/openzeppelin-contracts --no-commit
 ```shell
 git clone https://github.com/nidz-the-fact/foundry-starter-example
 ```
+or
+```shell
+npx degit https://github.com/nidz-the-fact/foundry-starter-example {NAME_FOLDER}
+```
 ### 2.2 Import
 
 ```shell
 forge install Openzeppelin/openzeppelin-contracts --no-commit
+```
+or
+```shell
+forge install
 ```
 *cc. learning: https://book.getfoundry.sh/projects/dependencies*
 ### 2.3 SmartContract 
