@@ -85,7 +85,8 @@ forge create --rpc-url {YOU_RPC_CHAIN} --private-key {YOU_PRIVATE_KEY} src/{YOU_
 ```
 if there are Arguments add `--constructor-args` {YOUR_ARGS_1_2}
 *cc. learning: https://book.getfoundry.sh/reference/forge/forge-create*
-### 2.5 Verify
+
+### 2.5.1 Verify
 
 ```shell
 forge verify-contract --verifier blockscout --verifier-url {EXP_URL}/api? {YOU_CONTRACT} {YOU_NAME_IN_CONTRACT} --chain-id {CHAIN_ID}
@@ -93,6 +94,16 @@ forge verify-contract --verifier blockscout --verifier-url {EXP_URL}/api? {YOU_C
 if there are Arguments add `--constructor-args` $(cast abi-encode "constructor(string,string)" "TestToken" "TT")
 *note: Verification requires importing the file into `src/..` or redeploying it through **foundry**.*
 *cc. learning: https://book.getfoundry.sh/reference/forge/forge-verify-contract*
+
+or 
+ ### 2.5.2 Flatten
+
+```shell
+forge flatten --output src/{YOU_PATH_CONTRACT_*_NOT_.SOL}.{YOU_NAME_IN_CONTRACT} {YOU_PATH_CONTRACT}
+```
+*note: After that go to Blokcscan.*
+*cc. https://book.getfoundry.sh/reference/forge/forge-flatten*
+
 ### 2.6 Advance deploy+verify
 
 ```shell
